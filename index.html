@@ -1,13 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
+    <title>Strona z Kontenerami</title>
+    
+    <!-- Google Font - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+   
 </head>
 <body>
-    second try
 
-    ok another try to change 
+    <div class="wrapper">
+        
+        <!-- 1. Górny kontener -->
+        <header class="card header-container">
+            <h1>Główny Kontener Górny</h1>
+            <p>Nagłówek strony – doskonałe miejsce na opis, menu nawigacyjne lub banner.</p>
+            <a href="index.html" class="logo">MojaFirma</a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Otwórz menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <p id="nav-menu">
+                <a href="index.html" class="nav-link active"> Główna </a>
+                <a href="site1.html" class="nav-link"> pszczoly </a>
+                <a href="site2.html" class="nav-link"> hodowla </a>
+                <a href="site3.html" class="nav-link"> formalnosci </a>
+                <a href="site4.html" class="nav-link"> bezpieczenstwo i ochrona </a>
+            </p>
+        </header>
+        
+
+        <!-- 2. Sekcja z trzema kolumnami -->
+        <main class="columns-container">
+            <section class="card column">
+                <h2>Kolumna 1</h2>
+                <p>Treść pierwszej kolumny. Możesz tutaj umieścić dowolne teksty, obrazy lub widżety.</p>
+            </section>
+
+            <section class="card column">
+                <h2>Kolumna 2</h2>
+                <p>Treść drugiej kolumny. Wszystkie kolumny automatycznie dostosowują swoją wysokość oraz szerokość.</p>
+            </section>
+
+            <section class="card column">
+                <h2>Kolumna 3</h2>
+                <p>Treść trzeciej kolumny. Na urządzeniach mobilnych kolumny układają się jedna pod drugą.</p>
+            </section>
+        </main>
+
+        <!-- 3. Dolny kontener -->
+        <footer class="card footer-container">
+            <p>Dolny kontener / Stopka strony &copy; 2026. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+
+    </div>
+
 </body>
 </html>
