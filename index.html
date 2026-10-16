@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona z Kontenerami</title>
+    <title>Ochrona Pszczół – Małe skrzydła, wielka misja</title>
     
     <!-- Google Font - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Plik ze stylami CSS -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-   
 </head>
 <body>
 
     <div class="wrapper">
         
-        <!-- 1. Górny kontener -->
         <header class="card header-container">
-            <h1>Główny Kontener Górny</h1>
-            <p>Nagłówek strony – doskonałe miejsce na opis, menu nawigacyjne lub banner.</p>
-            <a href="index.html" class="logo">MojaFirma</a>
+            <h1>Małe skrzydła, wielka misja</h1>
+            <p>Ochrona pszczół i zapylaczy w dobie zmian środowiskowych</p>
             
             <button class="hamburger" id="hamburger" aria-label="Otwórz menu">
                 <span class="bar"></span>
@@ -29,37 +27,80 @@
                 <span class="bar"></span>
             </button>
 
-            <p id="nav-menu">
-                <a href="index.html" class="nav-link active"> Główna </a>
-                <a href="site1.html" class="nav-link"> pszczoly </a>
-                <a href="site2.html" class="nav-link"> hodowla </a>
-                <a href="site3.html" class="nav-link"> formalnosci </a>
-                <a href="site4.html" class="nav-link"> bezpieczenstwo i ochrona </a>
-            </p>
+            <nav id="nav-menu" style="margin-top: 20px;">
+                <a href="index.html" class="nav-link active">Główna</a>
+                <a href="site1.html" class="nav-link">Pszczoły (Wikipedia)</a>
+                <a href="site2.html" class="nav-link">Hodowla</a>
+                <a href="site3.html" class="nav-link">Formalności</a>
+                <a href="site4.html" class="nav-link">Bezpieczeństwo i ochrona</a>
+            </nav>
         </header>
+
         
+        <section class="card" style="text-align: center; background-color: #fef3c7;">
+            <h2 style="font-size: 1.6rem; color: var(--text-primary); margin-bottom: 12px;">
+                Co trzecia łyżka pokarmu na naszym stole zależy od owadów zapylających.
+            </h2>
+            <p style="color: var(--text-secondary); max-width: 800px; margin: 0 auto 16px auto;">
+                [TUTAJ WKLEJ KRÓTKI WSTĘP: Opisz w 2-3 zdaniach, dlaczego współczesny świat jest trudnym środowiskiem dla pszczół i dlaczego każdy z nas może pomóc w ich ochronie.]
+            </p>
+        </section>
 
-        <!-- 2. Sekcja z trzema kolumnami -->
+
         <main class="columns-container">
+            
             <section class="card column">
-                <h2>Kolumna 1</h2>
-                <p>Treść pierwszej kolumny. Możesz tutaj umieścić dowolne teksty, obrazy lub widżety.</p>
+                <h2>1. Rola w ekosystemie</h2>
+                <p>
+                    <strong>Dlaczego trzeba je chronić?</strong><br>
+                </p>
             </section>
 
             <section class="card column">
-                <h2>Kolumna 2</h2>
-                <p>Treść drugiej kolumny. Wszystkie kolumny automatycznie dostosowują swoją wysokość oraz szerokość.</p>
+                <h2>2. Codzienne nawyki</h2>
+                <p>
+                    <strong>Jak pomagać na co dzień?</strong><br>
+                    [TUTAJ WKLEJ LISTĘ LUB OPIS: Poidełka z kamykami na balkonie, rzadsze koszenie trawnika, unikanie chemicznych oprysków w ogrodzie.]
+                </p>
             </section>
 
             <section class="card column">
-                <h2>Kolumna 3</h2>
-                <p>Treść trzeciej kolumny. Na urządzeniach mobilnych kolumny układają się jedna pod drugą.</p>
+                <h2>3. Ogród przyjazny pszczołom</h2>
+                <p>
+                    <strong>Co siać i budować?</strong><br>
+                    [TUTAJ WKLEJ TEKST: Rośliny miododajne (np. facelia, lawenda, koniczyna), domki dla pszczół samotnic (murarek).]
+                </p>
             </section>
+
         </main>
 
-        <!-- 3. Dolny kontener -->
+
+        <section class="card">
+            <h2 style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 12px;">
+                Miodowe wybory – Jak kupować odpowiedzialnie?
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 16px;">
+                
+                <div>
+                    <h3 style="color: var(--accent-eco); font-size: 1.1rem; margin-bottom: 8px;">Dobre praktyki zakupowe</h3>
+                    <p style="color: var(--text-secondary);">
+                        [TUTAJ WKLEJ TEKST: Wyjaśnij, dlaczego warto wspierać lokalnych pszczelarzy z okolicy zamiast kupować tanie, masowe mieszanki miodów z marketów.]
+                    </p>
+                </div>
+
+                <div>
+                    <h3 style="color: var(--accent-eco); font-size: 1.1rem; margin-bottom: 8px;">Skarby z ula</h3>
+                    <p style="color: var(--text-secondary);">
+                        [TUTAJ WKLEJ TEKST: Krótki opis właściwości pyłku kwiatowego, pierzgi, propolisu (kitu pszczelego) oraz wosku.]
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
         <footer class="card footer-container">
-            <p>Dolny kontener / Stopka strony &copy; 2026. Wszelkie prawa zastrzeżone.</p>
+            <p>Ochrona Pszczół &copy; 2026. Strona stworzona z miłości do natury i środowiska.</p>
         </footer>
 
     </div>

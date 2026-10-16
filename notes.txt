@@ -15,3 +15,8 @@ strona menu:
 -pszczoły ogólne informajce
 -ochrona pszczół
 -właściwa hodowla
+
+ROBIĆ STRONY ŁADNE I DOSTĘPNE
+opisane obrazy
+teks alternatywny 
+responsywność
