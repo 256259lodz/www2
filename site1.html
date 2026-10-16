@@ -18,23 +18,28 @@
     <div class="wrapper">
         
         <header class="card header-container">
+        <div class="header-title-group">
             <h1>Pszczele ABC (Wikipedia)</h1>
-            <p>Poznaj świat błonkówek – od ich anatomii po fascynujące zwyczaje</p>
-            
-            <button class="hamburger" id="hamburger" aria-label="Otwórz menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+            <p>Poznaj świat błonkówek</p>
+        </div>
+        
+        <button class="hamburger" id="hamburger" aria-label="Otwórz menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
-            <nav id="nav-menu" style="margin-top: 20px;">
-                <a href="index.html" class="nav-link">Główna</a>
-                <a href="site1.html" class="nav-link active">Pszczoły (Wikipedia)</a>
-                <a href="site2.html" class="nav-link">Hodowla</a>
-                <a href="site3.html" class="nav-link">Formalności</a>
-                <a href="site4.html" class="nav-link">Bezpieczeństwo i ochrona</a>
-            </nav>
-        </header>
+        <nav class="nav-menu" id="nav-menu">
+            <a href="index.html" class="nav-link">Główna</a>
+            <!-- Przenosimy klasę 'active' na tę podstronę -->
+            <a href="site1.html" class="nav-link active">Pszczoły (Wikipedia)</a>
+            <a href="site2.html" class="nav-link">Hodowla</a>
+            <a href="site3.html" class="nav-link">Formalności</a>
+            <a href="site4.html" class="nav-link">Bezpieczeństwo i ochrona</a>
+        </nav>
+    </header>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
 
 
         <section class="card">
@@ -117,6 +122,21 @@
         </footer>
 
     </div>
+
+    <<script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const overlay = document.getElementById('menu-overlay');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('open');
+            navMenu.classList.toggle('open');
+            overlay.classList.toggle('open');
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+    </script>
 
 </body>
 </html>

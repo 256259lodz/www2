@@ -16,7 +16,7 @@
 <body>
 
     <div class="wrapper">
-        
+        <!--
         <header class="card header-container">
             <h1>Małe skrzydła, wielka misja</h1>
             <p>Ochrona pszczół i zapylaczy w dobie zmian środowiskowych</p>
@@ -34,8 +34,34 @@
                 <a href="site3.html" class="nav-link">Formalności</a>
                 <a href="site4.html" class="nav-link">Bezpieczeństwo i ochrona</a>
             </nav>
+        </header> 
+    -->
+        <header class="card header-container">
+            <!-- Tytuł i podtytuł w jednej linii z przyciskiem -->
+            <div class="header-title-group">
+                <h1>Małe skrzydła, wielka misja</h1>
+                <p>Ochrona pszczół i zapylaczy</p>
+            </div>
+            
+            <!-- Przycisk z trzema kreskami -->
+            <button class="hamburger" id="hamburger" aria-label="Otwórz menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Wysuwany panel nawigacyjny -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Główna</a>
+                <a href="site1.html" class="nav-link">Pszczoły (Wikipedia)</a>
+                <a href="site2.html" class="nav-link">Hodowla</a>
+                <a href="site3.html" class="nav-link">Formalności</a>
+                <a href="site4.html" class="nav-link">Bezpieczeństwo i ochrona</a>
+            </nav>
         </header>
 
+        <!-- Tło przyciemniające strone po otwarciu (wklej tuż pod <header>) -->
+        <div class="menu-overlay" id="menu-overlay"></div>
         
         <section class="card" style="text-align: center; background-color: #fef3c7;">
             <h2 style="font-size: 1.6rem; color: var(--text-primary); margin-bottom: 12px;">
@@ -104,6 +130,24 @@
         </footer>
 
     </div>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const overlay = document.getElementById('menu-overlay');
+
+    function toggleMenu() {
+        hamburger.classList.toggle('open');
+        navMenu.classList.toggle('open');
+        overlay.classList.toggle('open');
+    }
+
+    // Otwieranie / zamykanie po kliknięciu w hamburgera
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Zamykanie menu po kliknięciu poza nim (na przyciemnione tło)
+    overlay.addEventListener('click', toggleMenu);
+</script>
 
 </body>
 </html>

@@ -159,3 +159,112 @@ body {
         padding: 24px;
     }
 }
+
+
+/* --- USTAWIENIA NAGŁÓWKA W JEDNEJ LINII --- */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 32px;
+}
+
+.header-title-group {
+    text-align: left;
+}
+
+.header-container h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 2px;
+    color: var(--text-primary);
+}
+
+.header-container p {
+    color: var(--accent-eco); 
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* --- PRZYCISK HAMBURGER (3 KRESKI) --- */
+.hamburger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    z-index: 1001; /* Zawsze nad wysuwanym menu */
+}
+
+.bar {
+    width: 28px;
+    height: 3px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animacja przekształcenia 3 kresek w iks "X" po otwarciu */
+.hamburger.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: var(--text-primary);
+}
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--text-primary);
+}
+
+/* --- WYSUWANA NAWIGACJA Z PRAWEJ STRONY --- */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Domyślnie ukryta poza ekranem */
+    width: 280px;
+    height: 100vh;
+    background-color: var(--card-bg);
+    border-left: 3px solid var(--accent-color);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 24px 24px 24px;
+    gap: 12px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Klasa aktywowana przez JavaScript */
+.nav-menu.open {
+    right: 0; /* Wysuwa panel na ekran */
+}
+
+/* Style linków wewnątrz wysuwanego panelu */
+.nav-menu .nav-link {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+/* Przyciemnienie tła po otwarciu menu */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
